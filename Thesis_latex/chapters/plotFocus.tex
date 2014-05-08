@@ -1,0 +1,32 @@
+% !TEX root = ../arbeit.tex
+\begin{wrapfigure}{r}{0.5\textwidth}
+\vspace{-1em}
+  \centering
+\begin{tikzpicture}
+	\begin{axis}[
+    /pgf/number format/.cd,
+        1000 sep={},
+        		height=.5\textwidth,
+		width=.5\textwidth,
+		grid=major,
+		legend pos=south east,
+		xlabel=Distance,
+		ylabel=PWM sig. in \textmu s,
+	]	
+	\addplot[draw=blue][domain=55:285] {-36076/x + 1750};
+	\addlegendentry{model}
+	\addplot coordinates {
+(60,1130)
+(72,1230)
+(80,1330)
+(100,	1430)
+(140,1480)
+(190,1530)
+(280,1630)};
+	\addlegendentry{measurement}
+	\end{axis}
+	\end{tikzpicture}
+         \caption{Focus-Distance model}
+
+\label{plot:focus}
+\end{wrapfigure}

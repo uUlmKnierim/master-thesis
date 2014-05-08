@@ -1,0 +1,331 @@
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[
+    a4paper,
+    10pt,
+    bibliography=totoc,
+    twoside,
+    openright,
+    numbers=noenddot,
+    headings=normal,
+    DIV=9,
+    BCOR=7mm
+    ,parskip
+]{scrbook}
+
+\usepackage[utf8]{inputenc}
+\usepackage[UKenglish]{babel}
+\usepackage[babel]{csquotes}
+
+\usepackage{lmodern}
+%\usepackage{times}
+%\usepackage{helvet}
+\usepackage[T1]{fontenc}
+
+
+%%
+%% Schriftarten
+%%
+\renewcommand{\sfdefault}{phv}
+\renewcommand{\rmdefault}{phv}
+\renewcommand{\ttdefault}{pcr}
+%\KOMAoptions{DIV=last}
+
+
+
+%%
+%% Diverse Pakete
+%%
+\usepackage{ccicons} % Creative Commons Lizenzsymbole
+\usepackage{enumitem} % Ãâ¬ndern von listeneinstellungen mit \setlist
+\setlist{nolistsep} % kein abstand zwischen items in listen, Befehl von enumitem
+\usepackage{float} % use \begin{figure}{H} to really force a figure being placed here
+\usepackage[section]{placeins} % floatbarrier at each new section, so every figure appears in its own section
+
+
+\usepackage{scrhack}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{colortbl}
+%\usepackage{showframe} % Seitenspiegel anzeigen
+
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+
+\usepackage{hyperref} 
+
+\hyphenation{so-phis-ti-cat-ed con-fig-u-ra-tion}
+
+
+\usepackage[euler]{textgreek}
+
+\usepackage{csvsimple}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{rotating}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{import}
+
+\usepackage{tabularx}
+
+\usepackage[nohyperlinks,printonlyused]{acronym}
+
+\usepackage{wasysym}
+
+\usepackage{pgfplots}
+\usepackage{tkz-base}
+
+\usepackage{wrapfig}
+\usepackage{boxhandler}
+
+\usepackage{siunitx}
+\usepackage{xfrac}
+
+\usepackage{xcolor}
+
+\newsavebox\IBoxA \newsavebox\IBoxB \newlength\IHeight
+\newcommand\TwoFig[8]{% Image1 Caption1 Label1 Image2 ...
+  \sbox\IBoxA{\includegraphics[width=0.45\textwidth]{#1}}
+  \sbox\IBoxB{\includegraphics[width=0.45\textwidth]{#4}}%
+  \ifdim\ht\IBoxA>\ht\IBoxB
+    \setlength\IHeight{\ht\IBoxB}\else\setlength\IHeight{\ht\IBoxA}\fi%
+  \begin{figure}[!htb]
+  \begin{subfigure}[b]{0.45\textwidth}
+  \centering
+  \includegraphics[height=\IHeight]{#1}
+  \caption{#2}\label{#3}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth}
+  \centering
+  \includegraphics[height=\IHeight]{#4}
+  \caption{#5}\label{#6}
+  \end{subfigure}
+  \caption{#7}\label{#8}
+  \end{figure}%
+}
+
+\usepackage[]{todonotes} %[disable]
+
+\usepackage[
+style=alphabetic,    % Zitierstil
+isbn=false,                % ISBN nicht anzeigen, gleiches geht mit nahezu allen anderen Feldern
+url=true,
+pagetracker=true,          % ebd. bei wiederholten Angaben (false=ausgeschaltet, page=Seite, spread=Doppelseite, true=automatisch)
+maxbibnames=50,            % maximale Namen, die im Literaturverzeichnis angezeigt werden (ich wollte alle)
+maxcitenames=2,            % maximale Namen, die im Text angezeigt werden, ab 4 wird u.a. nach den ersten Autor angezeigt
+autocite=inline,           % regelt Aussehen fÃÅr \autocite (inline=\parancite)
+block=space,               % kleiner horizontaler Platz zwischen den Feldern
+backref=false,              % Seiten anzeigen, auf denen die Referenz vorkommt
+%backrefstyle=three+,       % fasst Seiten zusammen, z.B. S. 2f, 6ff, 7-10
+date=short,                % Datumsformat
+backend=bibtex,
+hyperref=true
+]{biblatex}
+\setlength{\bibitemsep}{1em}     % Abstand zwischen den Literaturangaben
+\setlength{\bibhang}{2em}        % Einzug nach jeweils erster Zeile
+
+\bibliography{bibliography}  % Bibtex-Datei wird schon in der Preambel eingebunden
+
+\newcommand{\fullname}{Pascal Knierim}
+\newcommand{\email}{pascal.knierim@uni-ulm.de}
+\newcommand{\titel}{A Novel Projector Camera System for Effortless Domestic Deployment}
+\newcommand{\jahr}{2014}
+\newcommand{\matnr}{651625}
+\newcommand{\gutachterA}{Prof.\ Dr.\ Enrico Rukzio}
+\newcommand{\gutachterB}{Prof.\ Dr.\ Michael Weber} % -Ing. ????
+\newcommand{\betreuer}{Prof.\ Dr.\ Enrico Rukzio} 
+\newcommand{\fakultaet}{Engineering\\and Computer Science}
+\newcommand{\institut}{Institute of Media Informatics}
+\newcommand{\arbeit}{Master Thesis}
+
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+
+\pdfinfo{
+    /Author (\fullname)
+    /Title (\titel)
+    /Producer (pdfTeX, Version 3.1415926-2.5-1.40.14)
+    /Keywords ()
+}
+\hypersetup{
+    pdftitle=\titel,
+    pdfauthor=\fullname,
+    pdfsubject={\arbeit},
+    pdfproducer={pdfTeX, Version 3.1415926-2.5-1.40.14},
+    colorlinks=false,
+    pdfborder=0 0 0
+}
+
+\setcounter{tocdepth}{2}
+
+\clubpenalty10000
+\widowpenalty10000
+\displaywidowpenalty=10000
+
+\definecolor{Uulmin}{RGB}{163,38,56} 
+
+\lstset{
+    language=Prolog,
+    showstringspaces=false,
+    frame=single,%L,%TB,%single
+    breaklines=true,
+    breakatwhitespace=true,
+    numbers=left,
+    aboveskip=\parskip,
+    basicstyle=\ttfamily,
+    numberstyle=\tiny,
+    deletekeywords={ time, is, name, write, true, false, fail, or, length },
+    keywordstyle=\bfseries,
+    alsoletter= {<,=,>,:,-,@, |, \\, ? },
+    morekeywords={ <=>, ==> , :-, @, |, \\, ?- },
+    morecomment=[s]{\{}{\}},
+    moredelim=[is][\textbf]{<<}{>>},
+    moredelim=[is][\textit]{<<<}{>>>}
+}
+
+\newcommand{\FIXME}[1]{} % deploy mode
+
+% multi-letter variables in math mode
+\newcommand*{\var}[1]{\mathord{\mathit{#1}}}
+% relations in math mode
+\newcommand*{\rel}[1]{\mathord{\mathrm{#1}}}
+% functions in math mode
+\newcommand*{\fun}[1]{\mathord{\mathit{#1}}}
+
+\setlength{\arrayrulewidth}{0.1pt}
+
+\pagestyle{headings}
+
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemiii}{$\cdot$}
+
+\begin{document}
+
+\frontmatter
+
+\thispagestyle{empty}
+
+\begin{addmargin*}[4mm]{-32mm}
+    \includegraphics[height=1.8cm]{images/uni_logo/uni_bild}
+    \hfill
+    \includegraphics[height=1.8cm]{images/uni_logo/uni_wort}
+    \vspace*{2.1em}
+    \footnotesize
+    {\fontfamily{phv}\selectfont
+    
+    \textbf{Ulm University} \textbar ~89069 Ulm \textbar ~Germany
+    \hfill
+    \parbox[t]{42mm}{\bfseries Faculty of \fakultaet\\\mdseries\institut}
+    \vspace*{2cm}
+
+    \parbox{140mm}{\bfseries \raggedright \huge A Novel Projector Camera System\\ for Effortless Domestic Deployment}
+
+    {\arbeit{}\\Ulm University}
+    \vspace*{4em}
+
+    \fullname\\\email\\[2em]
+    \textbf{Reviewers:}\\\gutachterA\\\gutachterB\\[2em]
+    \textbf{Consultant:}\\\betreuer\\[1.5em]
+    \jahr}
+\end{addmargin*}
+
+
+\clearpage
+\thispagestyle{empty}
+{
+    \small \flushleft \enquote{\titel}\\
+    \today
+    \vfill
+
+    \copyright{} \jahr{} \fullname{}\\[0.5em]
+    This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License: \url{http://creativecommons.org/licenses/by-sa/3.0/}\\
+    \ccbysa\\
+    \vspace{0.5cm}
+    Typesetting: PDF-\LaTeXe{}\\
+    Graphics created with: Ti\textit{k}Z\\
+    Printed by: Kommunikations- und Informationszentrum (kiz), University of Ulm
+}
+
+\setstretch{1.2} 
+\renewcommand{\arraystretch}{1.2} 
+
+\input{chapters/abstract}
+
+
+\clearpage
+\vspace*{\fill}
+\thispagestyle{empty} % optional -- suppress showing of page number
+\begin{quotation}
+\begin{center}
+
+\em % optional -- to switch to emphasis (italics) mode
+Everything not saved will be lost.
+
+\medskip
+---Nintendo Quit Screen
+\end{center}
+\end{quotation}
+\vspace*{\fill}
+
+\makeatletter
+\renewcommand{\@pnumwidth}{1.8em} 
+\renewcommand{\@tocrmarg}{2em}
+\makeatother
+
+\microtypesetup{protrusion=false}
+\tableofcontents
+\microtypesetup{protrusion=true}
+
+\mainmatter
+\acresetall
+
+\input{chapters/introduction}
+\input{chapters/relatedWork}
+\input{chapters/interviews}
+\input{chapters/requirements}
+\input{chapters/architecture}
+\input{chapters/hardware}
+\input{chapters/software}
+\input{chapters/evaluation}
+\input{chapters/conclusion}
+
+\input{acronym}
+
+\nocite{Preece:1994wi}
+
+\printbibliography 
+
+\appendix
+\chapter{Appendix}
+\input{appendix/calibrationFile}
+\newpage
+\input{appendix/interviewApx}
+\input{appendix/widget_code}
+
+\backmatter
+
+\cleardoublepage
+\thispagestyle{empty}
+
+Name: \fullname \hfill Matrikelnummer: \matnr \vspace{2cm}
+
+\minisec{Erklärung}
+
+Ich erkläre, dass ich die Arbeit selbständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel verwendet habe.\vspace{2cm}
+
+Ulm, den \dotfill
+
+\hfill {\footnotesize \fullname}
+\end{document}

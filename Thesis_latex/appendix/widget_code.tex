@@ -1,0 +1,75 @@
+% !TEX root = ../arbeit.tex
+\section{Abstract Widget Class}
+\definecolor{myGreen}{RGB}{0,128,0}
+\definecolor{myBlue}{RGB}{0,0,128}
+\definecolor{myBrown}{RGB}{128,128, 0}
+\definecolor{myPink}{RGB}{128, 0, 128}
+\definecolor{myRed}{RGB}{128,0,0}
+\lstset{language=C++,
+    keywordstyle=\color{myBrown},
+    commentstyle=\color{myGreen},
+    frame=tb,
+    captionpos=b,
+    directivestyle={\color{myBlue}},
+    keywordstyle=[2]\color{myPink},%    
+    keywordstyle=[3]\color{myRed},
+    emph={Q_OBJECT},
+    morekeywords={import, property, string},
+    emphstyle={\color{myBlue}},
+%    emph={[2]QWidget, <QMouseEvent>},
+%    emphstyle={[2]\color{myGreen}},
+       morekeywords={RequirePackage,ProvidesPackage},
+       keywords=[2]{QMouseEvent, QPaintEvent,QWidget, Flickable, WebView },
+       keywords=[3]{flipped,WebView, id, url, contentWidth, contentHeight, scale,urlVar:, smooth,preferredWidth, preferredHeight},
+               literate={<QWidget>}{\textcolor{myGreen}{<QWidget>}}1
+		           {urlVar:}{\textcolor{myRed}{urlVar}: }1
+                           {<QMouseEvent>}{\textcolor{myGreen}{<QMouseEvent>}}1
+                           {https://news.google.com/}{\textcolor{myGreen}{https://news.google.com/}}1
+       		           {width:}{\textcolor{myRed}{width}: }1
+		           {height:}{\textcolor{myRed}{height}: }1
+}
+\begin{lstlisting}[ flexiblecolumns=true, caption=Abstract Widget Class,belowcaptionskip=8pt, label=widgetCodeListing]
+
+#include <QWidget>
+#include <QMouseEvent>
+
+class ProcamsWidget : public QWidget
+{
+    Q_OBJECT
+public:
+    virtual void paintEvent(QPaintEvent *) = 0;
+
+protected:
+    virtual void touchPressEvent(QMouseEvent *event);
+    virtual void touchReleaseEvent(QMouseEvent *event);
+    virtual void touchMoveEvent(QMouseEvent *event);
+    virtual void touchLongClickEvent(QMouseEvent *event);
+};
+\end{lstlisting}
+
+\newpage
+\section{QML Widget}
+\begin{lstlisting}[ flexiblecolumns=true, caption=QML web widget ,belowcaptionskip=8pt, label=QMLCodeListing]
+import QtQuick 1.1
+import QtWebKit 1.0
+
+Flickable {
+  property bool flipped: false
+  property string urlVar: "https://news.google.com/"
+
+id:flicker
+width: 750
+height: 500
+contentWidth: web.width
+contentHeight: web.height
+
+  WebView {
+      id: web
+      url: urlVar
+      preferredWidth: 750
+      preferredHeight: 500
+      scale: 1
+      smooth: false
+  }
+}
+\end{lstlisting}

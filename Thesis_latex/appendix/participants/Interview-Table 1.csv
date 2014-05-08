@@ -1,0 +1,19 @@
+Participant ;Switching on/off;Separate display;Movable unit;Battery powered ;Creating Interfaces;Combination of Units;Configuration;Size/Weight;Several parts
+P1;menu/speech/clapper;n, no add. conf;y (auto), for separate sufaces, controlled by speech;"y, combination (special wall plug; see P1: additional ideas)";show/click position ;n;;;n
+P2 - 1;remote/speech;n;y(auto), fix mounted ;n;show/interacton;n;single configuration;Small but battery powered;
+P3 - 2;at Device;n;y(auto);n;preconfigured;;;light intensity is important;
+P4 - 1;Switch at Door;n;y(auto);n, fixed installation;;;;;
+P5 - 2;MainSwitch -> Standby;n, not visible;y(auto);n, fixed installation;;;;;
+P6;clapper/gesture;n, not robust enough ;y, super flexible via adjustable shaft ;y ;Gestual/Klick via 2 Points;y, separation of ui and display;;Smaller, achieve high flexibility;n
+P7;Auto, depending on Persons behaviour ;n, fixed, preconfigured;y(auto);n;gestual;;;chic device;
+P8;Remote;n, fixed, preconfigured;y(auto);n;gestual;combination for out/input;;Small, not visible ;
+P9;continuous stand by ;n, not readable when mounted on ceiling ;n fixed installation ;n, fixed installation ;static, conf at pc;n;at computer ;does not matter, fixed ;
+P10;switch at box;n;n;n;gestual;n;;small/nice/ cup design ;
+P11;clapper;n;n;n;via pc;n;at computer;white/ size ok ;
+P12;remote;n, control via projected menu;y, manual ;y, visiting friends ;projected menu at bottom ;n;n;possible biger;
+P13;Auto, entering room;no, laser interaction;y, auto;n, is intalled, dont want to carry around;laser;y, if no remote available ;;dont care;
+P14;clapper;n;n, fixed;n, fixed installation;gestual, 2 point touching;y;;dont care, fixed ;
+P15;remote;n, fixed on ceiling ;n, fixed ;n, fixed installation ;menu Button;Separate cam for Skype;;dc, fixed ;
+P16;Automatic, remote, all on;simple interaction, setting alarm;n;n;remote for menue, than gestural ;n;n;dc, fixed ;
+P17;Speech (Like TV);n;y, manual ;y, visiting friends ;projected menu;n;dynamic;top;
+P18;Speech (Like TV);n;y, manual ;y, visiting friends ;Tablet as Remote;n, aufwand ;dynamic;top;

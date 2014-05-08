@@ -1,0 +1,19 @@
+Participant,Gender,Age,Job,Jobadditional,Smartphon,Touch Dev,Gesture De.,Beamerpresent,Groupwith,SizeofFlat,rooms,housemate,commonroom
+P1,m,26,student,media informatic ,y,y,y,n,-,72,3 + c,3,y
+P2 - 1,m,2 6,student ,computer science,n,n,y,n,P3,55,3 + c,2,y
+P3 - 2,f,26,digital media designer,x,y,n,y,n,P2,55,3 + c,2,y
+P4 - 1,f,31,Medical laboratory scientist,x,n,n,y,n,P5,75,3 + c ,2,y
+P5 - 2,f,28,PHD Student ,biology ,y,n,y,n,P4,75,3 + c,2,y
+P6,m,27,Student,media informatics,y,y,y,n,-,27,1,1,n
+P7 - 1,m,26,PHD Student,computer science ,y,n,n,n,P8,84,3,2,n
+P8 - 2,f,31,Psychotherapist,x,y,n,y,n,P7,84,3,2,n
+P9,m,27,Student,computer science,y,n,n,n,-,77,2.5 + c,2,y
+P10,m,25,Student ,computer science,y,y,y,n,P11,60,2+c,2,n
+P11,f,22,Student,psychology,y,n,y,n,P10,60,2 + c,2,n
+P12,f,22,Student,dentistry,y,n,y,n,-,27,1,1,n
+P13,m,24,Student ,medical engineering,y,n,y,y,-,68,3 + c ,2,y
+P14,m,26,Student,computer science,y,y,n,n,-,100,4 + c,4,y
+P15,f,25,Student ,psychology,n,n,n,n,-,55,3 +c ,2,y
+P16,f,26,Student ,computer science ,y,y,n,n,-,55,2 + c ,2,n
+P17,m,58,Businessman,x,y,n,n,n,P18,104,4,2,y
+P18,f,55,independent gentleman,x,y,y,n,n,P17,104,4,2,y

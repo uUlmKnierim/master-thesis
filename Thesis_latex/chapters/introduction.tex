@@ -1,0 +1,35 @@
+% !TEX root = ../arbeit.tex
+
+\chapter{Introduction}
+Ubiquitous computing is almost ``imperceptible, but everywhere around us,'' Weiser said already in 1991 \cite{Weiser:1991fa}. So far we achieve ubiquitous computing through carrying sophisticated mobile devices in our pockets that contain our whole digital life, rather than by the ubiquity of computing infrastructure. We are still dependent on the physical persistence of devices in our environment such as laptops or smart phones. To achieve ubiquitous computing, technology needs to recede into the background. Small, inexpensive processing devices distributed everywhere should provide location independent computational services. Therefore, an integration of human factors, software and hardware engineering, as well as social science needs to be accomplished.
+
+One critical question in ubiquitous computing is, how to visualise information and enable user interaction beyond the traditional forms of smart phones, tablets, and desktop computing.
+Currently no technology is capable of enabling integrated information presentation on any location in a domestic environment. In order to investigate novel interaction concepts and information visualisation in a ubiquitous environment, researchers use projectors to render information onto any physical object or surface. In combination with a camera, user input can be captured. Summarised under the term \ac{PROCAMS}, many research groups have proposed several basic approaches to facilitate everywhere projection. With the developed systems, every flat surface can be transformed into projected touch screens. However, proposed PROCAMS lack mobility, are bulky, and need large powerful workstations. They often require a complex calibration or even an instrumentation of the environment. Heretofore, systems are always located in laboratories and studies could never be conducted in a domestic environment. To the best of my knowledge no self-calibrating, rotatable, stand-alone PROCAMS was published so far.
+
+In this thesis, a novel \ac{PROCAMS} is designed, built and evaluated. The requirements are derived from preliminary interviews with potential end users. Additionally, ideas and approaches from many previously proposed systems are drawn together. Key features of the proposed systems are the user friendliness and lack of calibration tasks. There is no need for the end user to execute any calibration tasks. Furthermore, the PROCAMS is a stand-alone unit. In detail, one small box contains all hardware. The typically used large workstation is replaced by a small \ac{SBC}, integrated directly into the system. The complete system could be ceiling-mounted and is rotatable in two \ac{DOF}. This allows it to render information to every spot visible from the suspension point of the unit.
+
+The implemented software framework enables rapid application development. The complexity of spatially and geometrically aware projection, as well as the analysis of user input is completely decoupled from the application development. Touch interaction is converted into abstract events which can be handled in a generic way. 
+The designed platform consists of a hardware and software component, which are perfectly tailored to each other to ensure smooth, efficient operation.
+
+The objectives of this thesis are to integrate the new results of the current research in this field, combining these	 new outcomes with severals new techniques and small inexpensive hardware to create a small, rotatable, calibration-free projector camera system. This yields an user-friendly prototype which allows for the first time to explore how we deal with everywhere available computing and presentation of information as well as  new interaction concepts directly in users' well-known environments; their homes.
+
+
+\section{Vision}
+In a few years provided that technology continues to progress at its current rate, we could have large interactive displays everywhere. We could then easily access information and our digital life independently of our current location. Information would be available without the need for any personal physical device. Microsoft described this vision in a concept video\footnote{\url{www.microsoft.com/office/vision}} that shows how people will get things done at work, at home, and on the go in a world full of ubiquitous displays. 
+
+Innovation and development of new technologies will allow us to equip our home with large interactive screens everywhere. For example the work surface in the kitchen, dining room table or the mirror in the bathroom to name a few. Every screen will be interactive and will provide all the information we want wherever it is desired. Digital cooking instructions right beside the oven, virtual board games or a remote for any technical device could become reality. However, this vision is not limited to our homes or workplace. Cars or public transport as well as bars and restaurants, can be equipped with this future technology and will provide a new way of interacting, sharing and grasping information.
+
+Exploring the design space with the help of PROCAMS already today will reveal important findings for future systems. This will lead to more mature user interfaces and interaction concepts together with an adequate visualisation when technology makes wide spread deployment possible.
+
+
+\section{Overview}
+This thesis starts with a brief discussion of related work. Different types of PROCAMS including fixed as well as wearable and mobile installations, are compared and discussed in~\autoref{chapter:relatedWork}. In~\autoref{chapter:interview} the interviews conducted for the requirements engineering are described and the findings are discussed in detail. Requirements of the PROCAMS derived from the interviews are acquired in the following chapter. In \autoref{chapter:requirements}, a generic software and hardware architecture design is presented which fulfils the requirements. In the next two chapters, the hardware construction and software framework implementation is described in particular. The built prototype was evaluated in a technical laboratory study. The setup and findings are discussed in~\autoref{chapter:evaluation}. Chapter 9 summarises the work and gives an outlook on upcoming challenges and future work.
+
+The software framework and Android App, the engineering drawing of the designed hardware parts and the construction plan as well as the gathered data from the interviews including the images and a digital copy of this thesis can be downloaded at GitHub:
+\begin{description}
+  \item[Source Code] \url{https://github.com/uUlmKnierim/everywhereDisplaySoftware}
+  \item[Remote App] \url{https://github.com/uUlmKnierim/everywhereDisplayRemote}
+  \item[Hardware] \url{https://github.com/uUlmKnierim/everywhereDisplayHardware}
+  \item[Thesis and Interviews] \url{https://github.com/uUlmKnierim/master-thesis}
+\end{description} 
+For the matter of archiving, the version of the thesis at submission date is tagged with \emph{thesis} in each repository.

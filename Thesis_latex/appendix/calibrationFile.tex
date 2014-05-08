@@ -1,0 +1,54 @@
+% !TEX root = ../arbeit.tex
+\section{Camera Projector Calibration}\label{apx:calib}
+\begin{verbatim}
+Camera  PrimeSense (1280 x 960)
+=========
+Intrinsics
+----------
+camera matrix = [ 1089.4766, 0.0, 643.72626
+                  0.0, 1086.0332, 527.50134
+                  0.0, 0.0, 1.0 ]
+distortion coefficients =
+ [ 0.03148991, -0.18659991, -0.0018285413, 0.003724281 ]
+reprojection RMS/max error (pixels) = 0.9886399 / 2.3826725
+
+Extrinsics
+----------
+rotation = [ 1.0, 0.0, 0.0
+             0.0, 1.0, 0.0
+             0.0, 0.0, 1.0 ]
+translation = [ 0.0
+                0.0
+                0.0 ]
+epipolar RMS/max error (pixels) = 0.0 / 0.0
+
+Color
+-----
+order = BGR
+mixing matrix = null
+additive light = null
+normalized RMSE (intensity) = 0.0
+R^2 (intensity) = 1.0
+
+
+Projector  Optoma (1280 x 800)
+============
+Intrinsics
+----------
+camera matrix = [ 1969.6365, 0.0, 675.2177
+                  0.0, 1956.7374, 789.2852
+                  0.0, 0.0, 1.0 ]
+distortion coefficients = 
+[ -0.0133327255, -0.10250233, -0.0037307362, 0.005952384 ]
+reprojection RMS/max error (pixels) = 0.50833434 / 1.6034822
+
+Extrinsics
+----------
+rotation = [ 0.99992317, 0.011167082, -0.005384094
+             -0.011341835, 0.999371, -0.03359995
+             0.0050054938, 0.033658434, 0.9994209 ]
+translation = [ 403.57474
+                -277.41336
+                -198.09766 ]
+epipolar RMS/max error (pixels) = 0.5259377 / 1.6386813
+\end{verbatim}
